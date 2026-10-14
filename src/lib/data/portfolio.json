@@ -1,0 +1,325 @@
+{
+  "profile": {
+    "name": "Amr Abouelkheir",
+    "role": "Frontend Developer",
+    "email": "amrmahmoud20022002@gmail.com",
+    "phone": "+201551545978",
+    "location": "Alexandria, Egypt",
+    "linkedin": "https://www.linkedin.com/in/amr-abouelkher/",
+    "github": "https://github.com/AmrAbouelkheir"
+  },
+
+  "sections": [
+    { "id": "about", "label": "About" },
+    { "id": "skills", "label": "Skills" },
+    { "id": "projects", "label": "Projects" },
+    { "id": "experience", "label": "Experience" },
+    { "id": "contact", "label": "Contact" }
+  ],
+
+  "hero": {
+    "roles": [
+      "Software Engineer",
+      "Full Stack Developer",
+      "Web Developer",
+      "Frontend Developer"
+    ]
+  },
+
+  "about": {
+    "paragraphs": [
+      "I'm a Frontend Developer specializing in React.js, Next.js, and TypeScript. I build responsive, maintainable web applications, interactive dashboards, SaaS platforms, and user-friendly interfaces with a focus on clean code, performance, accessibility, and user experience.",
+      "My technical experience includes state management, API integration, form handling, data fetching, UI component libraries, and internationalization. I'm also expanding my backend development skills with Node.js, Express.js, Prisma, and PostgreSQL to better understand full-stack application architecture and build more complete web solutions. I hold a degree in Management Information Systems from Alexandria University."
+    ],
+    "chips": [
+      {
+        "icon": "MapPin",
+        "label": "Alexandria, Egypt"
+      },
+      {
+        "icon": "GraduationCap",
+        "label": "Alexandria University"
+      },
+      {
+        "icon": "Code2",
+        "label": "Frontend Specialist"
+      }
+    ],
+    "stats": [
+      {
+        "value": 4,
+        "suffix": "+",
+        "label": "Years of experience"
+      },
+      {
+        "value": 10,
+        "suffix": "+",
+        "label": "Projects"
+      },
+      {
+        "value": 2,
+        "suffix": "",
+        "label": "Companies"
+      }
+    ]
+  },
+
+  "skillCategories": [
+    {
+      "title": "Languages & Frameworks",
+      "icon": "Code2",
+      "skills": [
+        "JavaScript (ES6+)",
+        "TypeScript",
+        "React.js",
+        "Next.js",
+        "Node.js",
+        "Express.js",
+        "HTML5",
+        "CSS3",
+        "SCSS"
+      ]
+    },
+    {
+      "title": "Libraries & State Management",
+      "icon": "Layers",
+      "skills": [
+        "Redux Toolkit",
+        "TanStack Query",
+        "TanStack Router",
+        "React Router DOM",
+        "React Hook Form",
+        "Framer Motion",
+        "React Hot Toast",
+        "Lucide React"
+      ]
+    },
+    {
+      "title": "UI & Styling",
+      "icon": "Palette",
+      "skills": [
+        "Tailwind CSS",
+        "Shadcn UI",
+        "Base UI",
+        "Class Variance Authority",
+        "Tailwind Merge",
+        "CSS Animations"
+      ]
+    },
+    {
+      "title": "Backend & Database",
+      "icon": "Database",
+      "skills": [
+        "REST APIs",
+        "Firebase",
+        "Express.js",
+        "Prisma ORM",
+        "PostgreSQL",
+        "JWT Authentication",
+        "bcrypt",
+        "Cookie Parser",
+        "CORS"
+      ]
+    },
+    {
+      "title": "Forms, Validation & Data",
+      "icon": "ClipboardCheck",
+      "skills": ["Zod", "React Hook Form", "TanStack Query", "ImageKit"]
+    },
+    {
+      "title": "Tools & Development",
+      "icon": "Wrench",
+      "skills": [
+        "Git",
+        "Bun",
+        "npm",
+        "pnpm",
+        "ESLint",
+        "Prettier",
+        "Prisma CLI",
+        "TypeScript Compiler",
+        "Ubuntu",
+        "Debian",
+        "Mint"
+      ]
+    },
+    {
+      "title": "Internationalization & Theming",
+      "icon": "Globe",
+      "skills": ["next-intl", "next-themes", "RTL & LTR Layouts"]
+    },
+    {
+      "title": "Analytics & Tracking",
+      "icon": "ChartNoAxesCombined",
+      "skills": [
+        "Google Tag Manager",
+        "Google Analytics 4",
+        "Meta Pixel (Facebook & Instagram)",
+        "TikTok Pixel",
+        "OpenAI Ads Measurement Pixel"
+      ]
+    }
+  ],
+
+  "projects": [
+    {
+      "title": "CMNGO (Trading Education Platform)",
+      "image": "💻",
+      "tags": [
+        "Next.js",
+        "TypeScript",
+        "Tailwind CSS",
+        "shadcn/ui",
+        "Zod",
+        "TanStack Query",
+        "next-intl"
+      ],
+      "live": "https://cmngo.com/",
+      "preview": "/cmngo.png",
+      "highlights": [
+        "Built a responsive, bilingual web application for a subscription-based trading education platform using Next.js, React, TypeScript, Tailwind CSS, and RESTful APIs.",
+        "Implemented Arabic and English localization with RTL/LTR layout support using next-intl.",
+        "Developed reusable, maintainable UI components using React, TypeScript, Tailwind CSS, and shadcn/ui.",
+        "Implemented form handling and validation with React Hook Form and Zod, alongside server-state management with TanStack Query.",
+        "Enhanced pricing and checkout experiences, including promotional-code interactions and subscription-related user flows.",
+        "Maintained and improved existing features, resolving bugs and enhancing usability and frontend reliability.",
+        "Integrated Google Tag Manager with Google Analytics 4, Meta Pixel (Facebook and Instagram), TikTok Pixel, and OpenAI Ads Measurement Pixel for marketing analytics and conversion tracking."
+      ]
+    },
+    {
+      "title": "Dr. May Salah Eissa (Pulmonology Clinic Platform)",
+      "image": "🏥",
+      "tags": [
+        "Next.js",
+        "TypeScript",
+        "React",
+        "PostgreSQL",
+        "Prisma",
+        "Tailwind CSS"
+      ],
+      "live": "https://drmaysalah.com/",
+      "preview": "/drmay.png",
+      "highlights": [
+        "Built a full-stack bilingual (Arabic/English) clinic website and admin panel for a pulmonology practice in Alexandria, Egypt, using Next.js 16, React 19, TypeScript, Tailwind CSS, and shadcn/ui.",
+        "Implemented Arabic and English localization with RTL/LTR layout, locale cookies, and Accept-Language detection via next-intl (default locale: Arabic).",
+        "Delivered public pages for home, about, services (with statically generated service detail routes), clinic info, hospital/doctor collaborators, contact, online booking, and patient ratings/testimonials.",
+        "Built an online appointment booking flow with Zod validation, Cairo-time slot rules (no past dates/times), working-hour availability, duplicate-slot prevention, and transactional patient + appointment creation in PostgreSQL via Prisma.",
+        "Developed a JWT-protected admin dashboard (httpOnly cookies) with appointments, patients, services, collaborators, testimonial moderation, and clinic/doctor/education/working-hours settings.",
+        "Split production traffic by hostname: public site on www/custom domains and admin on admin.drmaysalah.com, with route guards so admin APIs and pages are not exposed on the marketing domain.",
+        "Implemented an analytics module with date-range filters, operational KPIs (revenue, completion/cancellation rates, patient sources), Recharts visualizations, and styled Excel export (xlsx-js-style).",
+        "Integrated ImageKit for image uploads and CDN delivery; used TanStack Query and TanStack Table for server state and admin data tables.",
+        "Added SEO and discoverability: dynamic metadata, Open Graph/Twitter cards, sitemap.xml, robots.txt, FAQ/Physician/MedicalClinic JSON-LD, and breadcrumb structured data.",
+        "Enhanced UX with Framer Motion, Embla carousels on the homepage, Leaflet/React-Leaflet maps for clinic location, WhatsApp booking links, and an intercepting modal route for the rating flow."
+      ]
+    },
+    {
+      "title": "Wellix Card (Egypt Medical Directory)",
+      "image": "🏥",
+      "tags": [
+        "Next.js",
+        "TypeScript",
+        "React",
+        "Tailwind CSS",
+        "Prisma",
+        "PostgreSQL",
+        "next-intl"
+      ],
+      "live": "https://www.wellixcard.com/",
+      "preview": "/wellix.png",
+      "highlights": [
+        "Built a responsive, bilingual (Arabic/English) medical directory for Egypt listing doctors, hospitals, pharmacies, and laboratories using Next.js 16 (App Router), React 19, TypeScript, and Tailwind CSS 4.",
+        "Implemented localization with next-intl, locale-based routing (`/en`, `/ar`), and RTL/LTR layout support with Cairo (Arabic) and Google Sans Flex (Latin) typography.",
+        "Designed public listing experiences with search, filters (city/district, specialty, gender, price, discounts, weekly availability), sorting, and pagination across doctors and facility types.",
+        "Developed rich detail pages with working hours, pricing/discounts, phone and WhatsApp contact, Leaflet maps, and user-submitted star reviews with admin moderation.",
+        "Architected a full-stack data layer with Prisma + PostgreSQL, REST API routes, service modules, and shared Zod validators for create/update payloads.",
+        "Built a protected admin dashboard (JWT cookie auth) for CRUD on all entity types, including React Hook Form flows, working-hours scheduling, and interactive map-based location picking.",
+        "Integrated ImageKit for secure admin image uploads and cleanup on entity delete, with Next.js image optimization for public assets.",
+        "Optimized performance and SEO with ISR (`revalidate`), `unstable_cache`, on-demand cache revalidation after admin changes, dynamic sitemap, robots.txt, Open Graph/Twitter metadata, and JSON-LD (Organization, Physician, and facility schemas).",
+        "Delivered admin hosting on a dedicated subdomain (`admin.wellixcard.com`) with middleware-based auth redirects, plus light/dark theming (next-themes) and TanStack Query for client/server state.",
+        "Structured the codebase with feature folders, shared types in `src/types/`, shadcn/Base UI components, Framer Motion animations, and react-hot-toast feedback."
+      ]
+    },
+    {
+      "title": "FullyCharged CMS Dashboard (EV Charging Operations Platform)",
+      "image": "⚡",
+      "tags": [
+        "React",
+        "TypeScript",
+        "Vite",
+        "TanStack Router",
+        "TanStack Query",
+        "TanStack Table",
+        "Redux Toolkit",
+        "Tailwind CSS",
+        "shadcn/ui"
+      ],
+      "live": "",
+      "preview": "/fullycharged.png",
+      "highlights": [
+        "Built a large-scale admin dashboard for FullyCharged’s EV charging ecosystem using React, TypeScript, Vite, Tailwind CSS, and shadcn/ui (Radix primitives).",
+        "Implemented role-based dual portals—system operators (owners, viewers, sales, accountants) and company operators (admin, editor, viewer)—with separate navigation, routes, and REST API clients.",
+        "Developed charger and station management, including OCPP-oriented operations (availability, restarts, firmware updates, configuration keys, diagnostics, meter values, connector pairing) and Leaflet/React-Leaflet map views for geolocation.",
+        "Built OCPI management screens for CPO/eMSP registration and sync, plus CPO and eMSP tariff CRUD and detail workflows.",
+        "Delivered operational modules for active charging transactions and failure investigation, wallet transactions, payouts (overview and requests), and push notifications.",
+        "Implemented subscription and billing flows: public subscriptions, company private packages, manual subscriptions (customers, invoices, vouchers, reports), and memberships with packages and invoices.",
+        "Created offers and promotions (FullyCharged promo, partner promo, sales requests, redemptions), company offers, invites and access requests, company groups, and company/user administration.",
+        "Built analytics home dashboards and reporting with Recharts and Tremor, including transaction, subscription, and B2B report views with PDF export (@react-pdf/renderer) and CSV export (react-csv), including batch CSV flows for invites and subscriptions.",
+        "Used TanStack Router (file-based, lazy-loaded routes), TanStack Query for server state, TanStack Table for sortable/filterable/paginated data tables aligned with API filters, React Hook Form with Zod validation, and centralized API error handling via createApiErrorHandler.",
+        "Added authenticated login with Google reCAPTCHA, Redux Toolkit with redux-persist for session persistence, light/dark theming, and responsive layouts including mobile-oriented table/sidebar patterns."
+      ]
+    }
+  ],
+
+  "experiences": [
+    {
+      "title": "Frontend Developer",
+      "company": "Commander Egypt & Qowwa Business Solutions",
+      "location": "Alexandria, Egypt",
+      "duration": "Aug 2026 — Present",
+      "current": true,
+      "description": "Developing and maintaining a responsive, bilingual web application for a subscription-based trading education platform using Next.js, React, TypeScript, Tailwind CSS, and RESTful APIs.",
+      "highlights": [
+        "Built responsive interfaces for educational content, course discovery, membership plans, and subscription workflows.",
+        "Implemented Arabic and English localization with RTL/LTR layout support using next-intl.",
+        "Developed reusable, maintainable UI components using React, TypeScript, Tailwind CSS, and shadcn/ui.",
+        "Implemented form handling and validation with React Hook Form and Zod, alongside server-state management with TanStack Query.",
+        "Enhanced pricing and checkout experiences, including promotional-code interactions and subscription-related user flows.",
+        "Maintained and improved existing features, resolving bugs and enhancing usability and frontend reliability.",
+        "Integrated Google Tag Manager with Google Analytics 4, Meta Pixel (Facebook and Instagram), TikTok Pixel, and OpenAI Ads Measurement Pixel for marketing analytics and conversion tracking."
+      ]
+    },
+    {
+      "title": "Frontend Developer",
+      "company": "EZ Business Consultancy",
+      "location": "Dubai, UAE",
+      "duration": "Dec 2024 — May 2025",
+      "current": false,
+      "description": "Joined EZ Business [https://ezbz.ae] to work on EV infrastructure for Fully charged [https://www.fullycharged.ae], one of the biggest operators in the UAE.",
+      "highlights": [
+        "Delivered a fully optimized Dashboard and station and charger management system, improving data accuracy, CSV exports, and reporting.",
+        "Streamlined subscription, wallet, and analytics workflows, enabling real-time insights and actionable daily/monthly metrics.",
+        "Enhanced promo offers, quotas, and push notifications, increasing usability and engagement across partner and public platforms.",
+        "Integrated EMSP and OCPI APIs, enabling seamless charger operations and simplifying tariff management for companies and system admins.",
+        "Refined UI/UX across dashboards, tables, and detail pages, reducing errors and improving efficiency for internal teams.",
+        "Implemented real-time updates, automated conversions, and workflow tools, saving time and improving operational reliability"
+      ]
+    },
+    {
+      "title": "Frontend Developer",
+      "company": "Daboo (Internship)",
+      "location": "Alexandria, Egypt",
+      "duration": "Dec 2022 — Jan 2024",
+      "description": "Worked as a Frontend Developer on a project to create a responsive web application for a company that provides a platform for booking and managing appointments. The project was built with React.js, Next.js, Tailwind CSS, and RESTful APIs."
+    }
+  ],
+
+  "education": [
+    {
+      "institution": "Alexandria University",
+      "degree": "Bachelor's Degree in Management Information Systems",
+      "duration": "2020 — 2024",
+      "location": "Alexandria, Egypt",
+      "cgpa": "3.02"
+    }
+  ]
+}

@@ -1,26 +1,440 @@
 @import "tailwindcss";
+@import "tw-animate-css";
+@import "shadcn/tailwind.css";
 
+@custom-variant dark (&:is(.dark *));
+
+/* ------------------------------------------------------------------ */
+/* 1. Design tokens (raw values). Kept as HSL channels so the same    */
+/*    `hsl(var(--x) / 0.5)` pattern from v3 keeps working.            */
+/* ------------------------------------------------------------------ */
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: 210 40% 98%;
+  --foreground: 222 47% 11%;
+
+  --card: 0 0% 100%;
+  --card-foreground: 222 47% 11%;
+
+  --popover: 0 0% 100%;
+  --popover-foreground: 222 47% 11%;
+
+  --primary: 172 66% 40%;
+  --primary-foreground: 0 0% 100%;
+
+  --secondary: 210 30% 94%;
+  --secondary-foreground: 222 47% 20%;
+
+  --muted: 210 30% 94%;
+  --muted-foreground: 215 16% 40%;
+
+  --accent: 210 30% 92%;
+  --accent-foreground: 222 47% 11%;
+
+  --destructive: 0 62% 50%;
+  --destructive-foreground: 0 0% 100%;
+
+  --border: 214 20% 88%;
+  --input: 214 20% 88%;
+  --ring: 172 66% 40%;
+
+  --radius: 2rem;
+
+  --sidebar-background: 210 40% 96%;
+  --sidebar-foreground: 222 47% 20%;
+  --sidebar-primary: 172 66% 40%;
+  --sidebar-primary-foreground: 0 0% 100%;
+  --sidebar-accent: 210 30% 94%;
+  --sidebar-accent-foreground: 222 47% 11%;
+  --sidebar-border: 214 20% 88%;
+  --sidebar-ring: 172 66% 40%;
+
+  --chart-1: 172 66% 40%;
+  --chart-2: 200 80% 48%;
+  --chart-3: 215 16% 46%;
+  --chart-4: 219 8% 46%;
+  --chart-5: 215 19% 34%;
+
+  --gradient-primary: linear-gradient(
+    135deg,
+    hsl(172 66% 40%),
+    hsl(200 80% 48%)
+  );
+  --gradient-hero: linear-gradient(
+    135deg,
+    hsl(210 40% 98%) 0%,
+    hsl(210 35% 95%) 50%,
+    hsl(215 30% 92%) 100%
+  );
+  --glass-bg: hsl(0 0% 100% / 0.75);
+  --glass-border: hsl(222 47% 11% / 0.08);
+  --glass-shadow: 0 8px 32px hsl(222 47% 11% / 0.08);
+  --glow-primary: 0 0 20px hsl(172 66% 40% / 0.2);
+  --text-gradient: linear-gradient(135deg, hsl(172 66% 35%), hsl(200 80% 45%));
+  --scrollbar-track: 210 40% 96%;
+  --scrollbar-thumb: 215 20% 80%;
+
+  --shadow-2xs: 0 1px 3px 0px hsl(222 47% 11% / 0.04);
+  --shadow-xs: 0 1px 3px 0px hsl(222 47% 11% / 0.06);
+  --shadow-sm: 0px 1px 22.75px 0px hsla(222, 47%, 11%, 0.06);
+  --shadow: 0px 1px 45.5px 0px hsla(222, 47%, 11%, 0.08);
+  --shadow-md: 0px 1px 68.25px 0px hsla(222, 47%, 11%, 0.1);
+  --shadow-lg: 0px 1px 113.75px 0px hsla(222, 47%, 11%, 0.12);
+  --shadow-xl:
+    0 1px 3px 0px hsl(222 47% 11% / 0.08),
+    0 8px 10px -1px hsl(222 47% 11% / 0.08);
+  --shadow-2xl: 0 1px 3px 0px hsl(222 47% 11% / 0.15);
 }
 
+.dark {
+  --background: 222 47% 6%;
+  --foreground: 210 20% 90%;
+
+  --card: 222 40% 10%;
+  --card-foreground: 210 20% 90%;
+
+  --popover: 222 40% 10%;
+  --popover-foreground: 210 20% 90%;
+
+  --primary: 172 66% 50%;
+  --primary-foreground: 222 47% 6%;
+
+  --secondary: 222 30% 14%;
+  --secondary-foreground: 210 20% 80%;
+
+  --muted: 222 30% 14%;
+  --muted-foreground: 215 15% 55%;
+
+  --accent: 222 30% 18%;
+  --accent-foreground: 210 20% 90%;
+
+  --destructive: 0 62% 50%;
+  --destructive-foreground: 210 40% 98%;
+
+  --border: 222 20% 18%;
+  --input: 222 20% 18%;
+  --ring: 172 66% 50%;
+
+  --sidebar-background: 222 40% 8%;
+  --sidebar-foreground: 210 20% 80%;
+  --sidebar-primary: 172 66% 50%;
+  --sidebar-primary-foreground: 222 47% 6%;
+  --sidebar-accent: 222 30% 14%;
+  --sidebar-accent-foreground: 210 20% 90%;
+  --sidebar-border: 222 20% 18%;
+  --sidebar-ring: 172 66% 50%;
+
+  --chart-1: 172 66% 50%;
+  --chart-2: 200 80% 55%;
+  --chart-3: 215 16% 46%;
+  --chart-4: 219 8% 46%;
+  --chart-5: 215 19% 34%;
+
+  --gradient-primary: linear-gradient(
+    135deg,
+    hsl(172 66% 50%),
+    hsl(200 80% 55%)
+  );
+  --gradient-hero: linear-gradient(
+    135deg,
+    hsl(222 47% 6%) 0%,
+    hsl(222 40% 10%) 50%,
+    hsl(230 35% 12%) 100%
+  );
+  --glass-bg: hsl(222 40% 10% / 0.6);
+  --glass-border: hsl(210 20% 90% / 0.08);
+  --glass-shadow: 0 8px 32px hsl(0 0% 0% / 0.3);
+  --glow-primary: 0 0 20px hsl(172 66% 50% / 0.3);
+  --text-gradient: linear-gradient(135deg, hsl(172 66% 50%), hsl(200 80% 60%));
+  --scrollbar-track: 222 47% 6%;
+  --scrollbar-thumb: 222 30% 20%;
+
+  --shadow-2xs: 0 1px 3px 0px hsl(0 0% 0% / 0.05);
+  --shadow-xs: 0 1px 3px 0px hsl(0 0% 0% / 0.05);
+  --shadow-sm: 0px 1px 22.75px 0px hsla(0, 0%, 0%, 0.17);
+  --shadow: 0px 1px 45.5px 0px hsla(0, 0%, 0%, 0.17);
+  --shadow-md: 0px 1px 68.25px 0px hsla(0, 0%, 0%, 0.17);
+  --shadow-lg: 0px 1px 113.75px 0px hsla(0, 0%, 0%, 0.17);
+  --shadow-xl:
+    0 1px 3px 0px hsl(0 0% 0% / 0.1), 0 8px 10px -1px hsl(0 0% 0% / 0.1);
+  --shadow-2xl: 0 1px 3px 0px hsl(0 0% 0% / 0.25);
+}
+
+/* ------------------------------------------------------------------ */
+/* 2. Theme mapping (replaces tailwind.config.ts `theme.extend`)      */
+/*    `inline` makes utilities reference the vars directly, so        */
+/*    .dark overrides work.                                           */
+/* ------------------------------------------------------------------ */
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
+  /* Fonts: variables are injected by next/font in app/layout.tsx */
+  --font-sans:
+    var(--font-inter), ui-sans-serif, system-ui, sans-serif,
+    "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --font-mono:
+    var(--font-jetbrains), ui-monospace, SFMono-Regular, Menlo, Monaco,
+    Consolas, "Liberation Mono", "Courier New", monospace;
+  --font-serif: ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+  /* Colors */
+  --color-border: hsl(var(--border));
+  --color-input: hsl(var(--input));
+  --color-ring: hsl(var(--ring));
+  --color-background: hsl(var(--background));
+  --color-foreground: hsl(var(--foreground));
+
+  --color-primary: hsl(var(--primary));
+  --color-primary-foreground: hsl(var(--primary-foreground));
+  --color-secondary: hsl(var(--secondary));
+  --color-secondary-foreground: hsl(var(--secondary-foreground));
+  --color-destructive: hsl(var(--destructive));
+  --color-destructive-foreground: hsl(var(--destructive-foreground));
+  --color-muted: hsl(var(--muted));
+  --color-muted-foreground: hsl(var(--muted-foreground));
+  --color-accent: hsl(var(--accent));
+  --color-accent-foreground: hsl(var(--accent-foreground));
+  --color-popover: hsl(var(--popover));
+  --color-popover-foreground: hsl(var(--popover-foreground));
+  --color-card: hsl(var(--card));
+  --color-card-foreground: hsl(var(--card-foreground));
+
+  --color-sidebar: hsl(var(--sidebar-background));
+  --color-sidebar-foreground: hsl(var(--sidebar-foreground));
+  --color-sidebar-primary: hsl(var(--sidebar-primary));
+  --color-sidebar-primary-foreground: hsl(var(--sidebar-primary-foreground));
+  --color-sidebar-accent: hsl(var(--sidebar-accent));
+  --color-sidebar-accent-foreground: hsl(var(--sidebar-accent-foreground));
+  --color-sidebar-border: hsl(var(--sidebar-border));
+  --color-sidebar-ring: hsl(var(--sidebar-ring));
+
+  --color-chart-1: hsl(var(--chart-1));
+  --color-chart-2: hsl(var(--chart-2));
+  --color-chart-3: hsl(var(--chart-3));
+  --color-chart-4: hsl(var(--chart-4));
+  --color-chart-5: hsl(var(--chart-5));
+
+  /* Radius */
+  --radius-lg: var(--radius);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-sm: calc(var(--radius) - 4px);
+
+  /* Shadows (values live in :root / .dark above) */
+  --shadow-2xs: var(--shadow-2xs);
+  --shadow-xs: var(--shadow-xs);
+  --shadow-sm: var(--shadow-sm);
+  --shadow-md: var(--shadow-md);
+  --shadow-lg: var(--shadow-lg);
+  --shadow-xl: var(--shadow-xl);
+  --shadow-2xl: var(--shadow-2xl);
+
+  /* Animations */
+  --animate-accordion-down: accordion-down 0.2s ease-out;
+  --animate-accordion-up: accordion-up 0.2s ease-out;
+  --animate-fade-up: fade-up 0.6s ease-out forwards;
+  --animate-fade-in: fade-in 0.6s ease-out forwards;
+  --animate-slide-in-left: slide-in-left 0.6s ease-out forwards;
+  --animate-float: float 6s ease-in-out infinite;
+  --animate-pulse-glow: pulse-glow 3s ease-in-out infinite;
+  --animate-marquee: marquee 90s linear infinite;
+  --animate-spin-slow: spin 8s linear infinite;
+
+  @keyframes accordion-down {
+    from {
+      height: 0;
+    }
+    to {
+      height: var(--radix-accordion-content-height);
+    }
+  }
+  @keyframes accordion-up {
+    from {
+      height: var(--radix-accordion-content-height);
+    }
+    to {
+      height: 0;
+    }
+  }
+  @keyframes fade-up {
+    0% {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  @keyframes fade-in {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  @keyframes slide-in-left {
+    0% {
+      opacity: 0;
+      transform: translateX(-30px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+  @keyframes float {
+    0%,
+    100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-10px);
+    }
+  }
+  @keyframes pulse-glow {
+    0%,
+    100% {
+      box-shadow: 0 0 20px hsl(172 66% 50% / 0.2);
+    }
+    50% {
+      box-shadow: 0 0 40px hsl(172 66% 50% / 0.4);
+    }
+  }
+  @keyframes marquee {
+    from {
+      transform: translateX(0);
+    }
+    to {
+      transform: translateX(-50%);
+    }
   }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+/* ------------------------------------------------------------------ */
+/* 3. Container (v3 config: center, 2rem padding, 1400px at 2xl)      */
+/* ------------------------------------------------------------------ */
+@utility container {
+  margin-inline: auto;
+  padding-inline: 2rem;
+  @media (width >= 96rem) {
+    max-width: 1400px;
+  }
+}
+
+/* ------------------------------------------------------------------ */
+/* 4. Base styles                                                     */
+/* ------------------------------------------------------------------ */
+@layer base {
+  /* v4 defaults borders to currentColor; restore the v3/shadcn behavior */
+  * {
+    @apply border-border;
+    button {
+      @apply cursor-pointer;
+    }
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans antialiased;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply font-bold tracking-tight;
+  }
+
+  code {
+    @apply font-mono;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    /* Keep anchored sections clear of the fixed navbar */
+    scroll-padding-top: 4rem;
+  }
+
+  ::selection {
+    background: hsl(var(--primary) / 0.3);
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+  }
+}
+
+/* ------------------------------------------------------------------ */
+/* 5. Custom utilities (were @layer components in v3).                */
+/*    In v4 they must be @utility so hover:/md:/dark: variants work.  */
+/* ------------------------------------------------------------------ */
+@utility glass-card {
+  background: var(--glass-bg);
+  border: 1px solid var(--glass-border);
+  box-shadow: var(--glass-shadow);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border-radius: var(--radius);
+}
+
+@utility text-gradient {
+  background: var(--text-gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+@utility glow {
+  box-shadow: var(--glow-primary);
+}
+
+@utility section-padding {
+  @apply px-6 py-20 md:px-12 lg:px-24 xl:px-32;
+}
+
+/* Subtle blueprint grid; mask it at the usage site for a vignette */
+@utility bg-grid {
+  background-image:
+    linear-gradient(hsl(var(--border) / 0.5) 1px, transparent 1px),
+    linear-gradient(90deg, hsl(var(--border) / 0.5) 1px, transparent 1px);
+  background-size: 56px 56px;
+}
+
+@utility gradient-border {
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: var(--radius);
+    padding: 1px;
+    background: var(--gradient-primary);
+    -webkit-mask:
+      linear-gradient(#fff 0 0) content-box,
+      linear-gradient(#fff 0 0);
+    mask:
+      linear-gradient(#fff 0 0) content-box,
+      linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+  }
+}
+
+/* ------------------------------------------------------------------ */
+/* 6. Scrollbar                                                       */
+/* ------------------------------------------------------------------ */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: hsl(var(--scrollbar-track));
+}
+::-webkit-scrollbar-thumb {
+  background: hsl(var(--scrollbar-thumb));
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: hsl(172 66% 50% / 0.5);
 }
