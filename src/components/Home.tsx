@@ -28,8 +28,8 @@ const Index = () => {
         <Hero onOpenPalette={() => setPaletteOpen(true)} />
         <Marquee />
         <About />
-        <Skills />
         <Projects />
+        <Skills />
         <Experience />
         <Contact />
       </main>
